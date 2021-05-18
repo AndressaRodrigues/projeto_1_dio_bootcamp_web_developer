@@ -13,7 +13,19 @@
     --link-color: #BB86FC;
     --text-color: #C2C2C2;
     --download-text: #C2C2C2;
-    --group-border: #454545;
+    --group-border: #454545;    
+}
+
+.dark-mode .instagram-phone img {
+    filter: brightness(.8) contrast(1.2);
+}
+
+.dark-mode .profile-photo img {
+    filter: brightness(.8) contrast(1.2);
+}
+
+.dark-mode .app-download {
+    filter: brightness(.8) contrast(1.2);
 }
 
 * {

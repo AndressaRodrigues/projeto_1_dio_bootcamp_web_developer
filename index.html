@@ -6,7 +6,7 @@
     <title>Instagram</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body class>
     <div class='instagram-wrapper'>
         <div class='instagram-phone'>
             <img src='./img/phones.png' alt='Dois smartphones com o Instagram aberto'></img>
@@ -29,17 +29,28 @@
 
                 </p>
             </div>
-        <div class="get-the-app">
+            <div class="get-the-app">
             <p class="get-app">Baixe o aplicativo</p>
-            <div class="download">
+                <div class="download">
                 <a href="#" class='app-download'></a>
                 <a href="#" class='app-download'></a>
 
+                </div>
             </div>
-        </div>
+            <div>
+                <button onclick="myFunction()" class="dark-mode-button">Modo escuro</button>
+            </div>
         </div>
     </div>
 
+    
+
+    <script>
+        function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        }
+    </script>
 
   </body>
 </html>

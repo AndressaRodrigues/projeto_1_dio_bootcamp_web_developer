@@ -1,9 +1,19 @@
 :root{
-    --light-theme-blue : #0095f6;
-    --light-background : rgb(243, 243, 243);
-    --light-detached-background: #fff;
-    --light-text-color: rgb(160, 160, 160);
-    --light-grop-border: lightgray;
+    --link-color : #0095f6;
+    --background-base : rgb(243, 243, 243);
+    --detached-background: #ffffff;
+    --text-color: rgb(160, 160, 160);
+    --group-border: lightgray;
+    --download-text: #000;
+}
+
+.dark-mode{
+    --background-base : #121212;
+    --detached-background: #272727;  
+    --link-color: #BB86FC;
+    --text-color: #C2C2C2;
+    --download-text: #C2C2C2;
+    --group-border: #454545;
 }
 
 * {
@@ -20,7 +30,7 @@
 body {
     width: 100%;
     min-width: 100vh;
-    background-color: var(--light-background);
+    background-color: var(--background-base);
     margin: 0;
     padding: 0;
     display: flex;
@@ -60,10 +70,14 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--light-detached-background);
+    background-color: var(--detached-background);
     width: 100%;
     padding: 1.3rem 0;
-    border: 1px solid var(--light-grop-border);
+    border: 1px solid var(--group-border);
+}
+
+.group a {
+    color: var(--detached-background);
 }
 
 .group:nth-child(1) {
@@ -89,23 +103,23 @@ body {
 }
 
 .instagram-login {
-    background-color: var(--light-theme-blue);
-    color: var(--light-detached-background);
+    background-color: var(--link-color);
+    color: var(--detached-background);
     padding: 8px;
     border-radius: 4px;
 }
 
 .instagram-logout {
-    color: var(--light-theme-blue);
+    color: var(--link-color);
     margin-top: 1rem;
 }
 
 .not-account {
-    color: var(--light-text-color);
+    color: var(--text-color);
 }
 
 .link-blue {
-    color: var(--light-theme-blue);
+    color: var(--link-color);
 }
 
 .get-the-app {
@@ -115,6 +129,10 @@ body {
     justify-content: center;
     width: 100%;
     padding: 1.3rem 0;
+}
+
+.get-the-app p {
+    color: var(--download-text);
 }
 
 .download {
@@ -137,6 +155,12 @@ body {
 
 .app-download:nth-child(2) {
     background-image: url('./img/download_android.png');
+}
+
+.dark-mode-button{
+    height: 1.5rem;
+    width: 6rem;
+    font-size: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -162,3 +186,4 @@ body {
         border: 1px solid transparent;
     }
 }
+
